@@ -1,0 +1,8 @@
+<view wx:for="{{article_list}}" class="row" wx:key="" bindtap='showDetail' data-index="{{index}}">
+    <view>
+        <!-- 标题 -->
+        <view class="title">{{item.title}}</view>
+        <!-- 日期 -->
+        <view class="time">{{item.updatedAt}}</view>
+    </view>
+</view>

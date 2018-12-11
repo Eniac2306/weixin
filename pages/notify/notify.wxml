@@ -1,0 +1,11 @@
+<view class="top-tab flex-wrp flex-tab">
+   <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+      {{itemName}}
+    </view>
+</view>
+
+<view style='margin: 60px 10px'hidden='{{currentNavtab != 0}}'>我是通知我是通知我是通知我是通知我是通知我是通知我是通知我是通知我是通知我是通知我是通知我是通知</view>
+
+<view style='margin: 60px 10px'hidden='{{currentNavtab != 1}}'>我是赞和感谢我是赞和感谢我是赞和感谢我是赞和感谢我是赞和感谢我是赞和感谢</view>
+
+<view style='margin: 60px 10px'hidden='{{currentNavtab != 2}}'>我是关注我是关注我是关注我是关注我是关注我是关注</view>

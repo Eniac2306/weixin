@@ -1,0 +1,63 @@
+.container {
+  flex: 1;
+  display: flex;
+   flex-direction: column 
+}
+
+.user {
+   flex-direction: row; 
+   display: flex;
+   flex: 1;
+   border-bottom: 1px solid lightgrey;
+}
+
+.userinfo-avatar{
+   margin: 10px;
+   width: 50px;
+   height: 50px; 
+   border-radius: 25px;
+   border: 0.5px solid lightgray
+}
+
+.userinfo {
+   margin-top: 20px;
+   color: "gray";
+   text-align: left;
+   flex-direction: column;
+   display: flex
+}
+
+.my-item {
+   display: flex;
+   flex: 1;
+   flex-direction: row;
+   border-bottom: 1px solid lightgrey;
+   height: 44px;
+   align-items: center
+}
+
+.myitem-icon {
+   width: 20px;
+   height: 20px;
+   margin-left: 10px; 
+}
+
+.edit {
+  color:gray;
+  font-size: 15px
+}
+.myList {
+  display: flex;
+  flex: 1;
+  flex-direction: column 
+}
+
+.my {
+  display: flex;
+  flex: 1;
+  flex-direction: column 
+}
+
+.myitem-name {
+  margin-left: 20px;
+}

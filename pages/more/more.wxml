@@ -1,0 +1,78 @@
+<view class='container'>
+  <view class='user'>
+    <view class='userinfo-avater'>
+    <!--src='../../images/invite.png'   -->
+      <image class="userinfo-avatar" src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <view class='userinfo'>
+      <text class='edit'>{{userInfo.nickName}}</text>
+      <text class='edit'>查看或编辑个人主页</text>
+    </view>
+  </view>
+
+  <view class='myList'>
+  <!--我的关注  -->
+    <view class='my-item'>
+       <view class='myitem-icon'>
+        <image src="../../images/eye.png" class='myitem-icon'></image>
+       </view>
+       <view class="myitem-name flex-item">
+          <text>我的关注</text>
+       </view>
+    </view>
+    <!--我的收藏  -->
+     <view class='my-item'>
+       <view class="myitem-icon" >
+        <image src="../../images/star.png" class='myitem-icon'></image>
+       </view>
+       <view class="myitem-name flex-item">
+          <text>我的收藏</text>
+       </view>
+    </view>
+    <!--我的草稿  -->
+     <view class='my-item'>
+       <view class="myitem-icon" >
+        <image src="../../images/draft.png" class='myitem-icon'></image>
+       </view>
+       <view class="myitem-name flex-item">
+          <text>我的草稿</text>
+       </view>
+    </view>
+   </view>
+   <!--最近浏览  -->
+     <view class='my-item'>
+       <view class="myitem-icon" >
+        <image src="../../images/draft.png" class='myitem-icon'></image>
+       </view>
+       <view class="myitem-name flex-item">
+          <text>最近浏览</text>
+       </view>
+    </view>
+    <!--我的书架  -->
+     <view class='my-item'>
+       <view class="myitem-icon" >
+        <image src="../../images/draft.png" class='myitem-icon'></image>
+       </view>
+       <view class="myitem-name flex-item">
+          <text>我的书架</text>
+       </view>
+    </view>
+    <!--我的Live  -->
+     <view class='my-item'>
+       <view class="myitem-icon" >
+        <image src="../../images/write.png" class='myitem-icon'></image>
+       </view>
+       <view class="myitem-name flex-item">
+          <text>我的Live</text>
+       </view>
+    </view>
+    <!--我的知乎  -->
+     <view class='my-item'>
+       <view class="myitem-icon" >
+        <image src="../../images/zhi.png" class='myitem-icon'></image>
+       </view>
+       <view class="myitem-name flex-item">
+          <text>我的知乎</text>
+       </view>
+    </view>
+</view>
