@@ -1,0 +1,24 @@
+<view class='container'>
+
+  <block>
+    <view class='title'><text>健身圈</text></view>
+    <view class='content'>
+      <view class='hd' style='transform:rotateZ({{angle}}deg);'>
+        <image class='logo' src='{{userInfo.avatarUrl}}'></image>
+        <image class='wave' src='../../images/wave.png' mode='aspectFill'></image>
+        <image class='wave wave-bg' src='../../images/wave.png' mode='aspectFill'></image>
+      </view>
+      <view class='bd'>
+        
+        <view class='confirm-btn'>
+
+          <button class='login-btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">开始使用</button>
+          <view class='admin-login' bindtap='checkAdmin'>管理员登录</view>
+
+        </view>
+        <text class='copyright'>© {{year}} 敏捷软件设计</text>
+      </view>
+    </view>
+  </block>
+
+</view>

@@ -1,21 +1,13 @@
-.flex-wrp{
-  display: flex;
+page {
+  background-color: rgba(92, 88, 88, 0.123)
 }
-.flex-tab{
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: stretch;
-}
-.flex-item{
-  flex-grow: 1;
-  text-align: center;
-}
+
 .top-tab{
   width: 750rpx;
   height: 100rpx;
-  background: #298DE5;
+  background: #0068c4;
   color: #8CCEFD;
-  font-size: 28rpx;
+  font-size: 32rpx;
   line-height: 100rpx;
   box-shadow: 0 2px 2px #bebebe;
   margin: 0 0 8rpx 0;
@@ -23,9 +15,211 @@
   top: 0;
   z-index: 9999;
 }
-
-/*下面滑动的线  */
 .toptab.active{
   color: #ffffff;
   border-bottom: solid 2px #ffffff;
+}
+
+.subtitle {
+  padding: 20rpx 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+}
+
+.subtitle image {
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 30rpx;
+  flex-shrink: 0;
+}
+
+.feed-list {
+  
+  margin-bottom: 4px;
+  padding: 8px 18px;
+  background-color: white;
+}
+
+.feedtitle {
+  display: flex;
+}
+
+.feedtitle image {
+  width: 62rpx;
+  height: 62rpx;
+  border-radius: 50rpx;
+}
+
+.feedtitle .name {
+  height: 62rpx;
+  line-height: 62rpx;
+  margin-left: 40rpx;
+  font-size: 32rpx;
+  color: black;
+  font-weight: 300;
+}
+
+.feed-list .title {
+  margin: 20rpx 0;
+  font-size: 36rpx;
+  color: #666;
+}
+
+.feed-list .time {
+   font-size: 24rpx;
+    color: #999;
+}
+
+.subtitle text {
+  font-size: 36rpx;
+  color: #666;
+}
+
+.info_num {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 25px;
+  margin-left: 20px;
+}
+
+.item-wrapper{
+    width: 100%; 
+    overflow: hidden;
+    border-top: 1px solid #f4f4f4;
+}
+
+.item-list{
+    position: relative;
+    width: 100%;
+    height: 138rpx;
+}
+
+.item-info, .item-oper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.item-info{
+    display: flex;
+    padding: 20rpx 20rpx 20rpx 0;
+    z-index: 2;
+    background: white;
+    transition: left 0.2s ease-in-out;
+}
+
+.item-list:first-child{
+    border-top: 1px solid #f4f4f4;
+}
+
+.item-oper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.oper-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150rpx;
+    z-index: 1;
+    color: white;
+    background: red;
+    font-size: 32rpx;
+}
+
+.info-img{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 25rpx;
+    margin-left: 20rpx;
+}
+
+.info-wrapper{
+    margin-left: 20rpx;
+    width: 588rpx;
+}
+
+.info-desc{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 6rpx;
+}
+
+.info-desc .name{
+    font-size: 32rpx;
+    color: black;
+    font-weight: 600;
+}
+
+.info-desc .time{
+    font-size: 24rpx;
+    color: #999;
+}
+
+.info-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 6rpx;
+}
+
+.info-content .message{
+    font-size: 28rpx;
+    color: #bf925c;
+    margin-top: 4rpx;
+}
+
+.info-content .status{
+    font-size: 24rpx;
+    color: #bf925c;
+}
+
+.info-content .read_1{
+    color: #999;
+}
+
+/*页面为空的样式*/
+
+.empty_img {
+  height: 115rpx;
+  width: 141rpx;
+}
+
+.t28rpx {
+  font-size: 28rpx;
+  line-height: 42rpx;
+  color: rgb(142, 142, 142);
+}
+
+.imgitem {
+  display: flex;
+  justify-content: center;
+  margin-top: 73rpx;
+  
+}
+
+.txtitem {
+  display: flex;
+  justify-content: center;
+  margin-top: 29rpx;
+  margin-bottom: 29rpx;
 }

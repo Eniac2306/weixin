@@ -1,19 +1,22 @@
 {
   "pages":[
-  
+    "pages/start/start",
     "pages/list/list",
-    "pages/index/index",
+    "pages/question/question",
     "pages/notify/notify",
     "pages/more/more",
     "pages/detail/detail",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/more/myQuestions/myQuestions",
+    "pages/more/myAnswers/myAnswers",
+    "pages/more/questionsFollow/questionsFollow",
+    "pages/more/usersFollow/usersFollow",
+    "pages/admin/list/list",
+    "pages/admin/detail/detail"
   ],
   "window": {
-    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#0068C4",
-    "navigationBarTitleText": "社区问答",
-    "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#626567",
@@ -22,14 +25,14 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/list/list",
         "text": "首页",
         "iconPath": "images/index.png",
         "selectedIconPath": "images/index_focus.png"
       },
       {
         "pagePath": "pages/notify/notify",
-        "text": "通知",
+        "text": "动态",
         "iconPath": "images/ring.png",
         "selectedIconPath": "images/ring_focus.png"
       },
@@ -40,5 +43,10 @@
         "selectedIconPath": "images/burger_focus.png"
       }
     ]
-  }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }

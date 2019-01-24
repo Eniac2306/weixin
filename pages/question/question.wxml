@@ -1,0 +1,23 @@
+<!-- 新建问题 -->
+<view class="add-page">
+  <form bindsubmit="submitForm">
+   <view class="toptips_warn" wx:if="{{showTopTips}}">{{TopTips}}</view>
+    <view class="mod-a">
+      <!-- 问题主题 -->
+      <view class="mod t-name">
+        <text class="key">主题</text>
+        <input name="title" class="input" maxlength="100" placeholder="请输入问题的主题" value="{{title}}" />
+      </view>
+    </view>
+
+    <!-- 问题内容 -->
+    <view class="mod-a mt20">
+      <view class="mod-big">
+        <textarea name="content" placeholder="请输入问题内容" value="{{content}}" style="height: 7em" bindinput="bindTextAreaChange" maxlength="{{noteMaxLen}}" />
+        <view class="chnumber">{{noteNowLen}}/{{noteMaxLen}}</view>
+      </view>
+    </view>
+
+    <button class='button' loading="{{isLoading}}" hover-start-time="200" disabled="{{isdisabled}}" formType="submit">我要提问</button>
+  </form>
+</view>

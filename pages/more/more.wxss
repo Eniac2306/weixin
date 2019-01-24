@@ -1,14 +1,11 @@
 .container {
-  flex: 1;
-  display: flex;
-   flex-direction: column 
+  flex-direction: column;
 }
 
 .user {
-   flex-direction: row; 
-   display: flex;
-   flex: 1;
-   border-bottom: 1px solid lightgrey;
+  margin: 20rpx 20rpx;
+  
+  display: flex;
 }
 
 .userinfo-avatar{
@@ -28,18 +25,9 @@
 }
 
 .my-item {
-   display: flex;
-   flex: 1;
-   flex-direction: row;
-   border-bottom: 1px solid lightgrey;
    height: 44px;
-   align-items: center
-}
-
-.myitem-icon {
-   width: 20px;
-   height: 20px;
-   margin-left: 10px; 
+   line-height: 50px;
+   border-bottom: 1px solid lightgray;
 }
 
 .edit {
@@ -47,17 +35,30 @@
   font-size: 15px
 }
 .myList {
-  display: flex;
-  flex: 1;
-  flex-direction: column 
-}
-
-.my {
-  display: flex;
-  flex: 1;
-  flex-direction: column 
+  width: 100%;
+  align-items: left;
 }
 
 .myitem-name {
-  margin-left: 20px;
+  text-align: left;
+  margin-left: 100rpx;
+}
+
+.ques {
+  height: 58rpx;
+  margin-top: 40rpx;
+  margin-left: 200rpx;
+  padding: 8rpx 18rpx;
+  display: flex;
+  border: 2px solid #0068c4;
+  border-radius: 10px;
+}
+.ques image {
+  width: 58rpx;
+  height: 58rpx;
+  margin-right: 20rpx;
+}
+.ques_btn {
+  font-size:36rpx;
+  line-height: 58rpx; 
 }

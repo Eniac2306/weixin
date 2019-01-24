@@ -1,18 +1,44 @@
+page {
+  background-color: rgba(92, 88, 88, 0.123)
+}
+
 .row {
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  margin-bottom: 4px;
+  padding: 8px 18px;
+  background-color: white;
 }
 
 .title {
   font-size: 16px;
   color: #333;
-  margin: 10px 0;
+  margin: 5px 0;
   line-height: 130%;
 }
 
 .time {
-  font-size: 14px;
+  font-size: 12px;
   color: #999;
-  margin: 10px 0;
+}
+
+.loading-indicator {
+    text-align: center;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.answer-actions{
+  width: 690rpx;
+  padding: 10rpx 0  0;
+  color: #a0acac;
+}
+
+.answer-actions view{
+  display: inline-block;
+  vertical-align: text-bottom;
+  padding: 0 10rpx 0 0;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+  margin-bottom: 4px;
 }

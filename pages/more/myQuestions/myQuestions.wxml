@@ -1,0 +1,43 @@
+<view class="container">
+  <view wx:if="{{total1 == 0 && total2 == 0}}">
+    <view class="txtitem">
+      <text class="t28rpx">暂无帖子</text>
+    </view>
+  </view>
+
+  <view wx:if="{{total1 > 0}}">
+    <view wx:for="{{question_list1}}" class="row" wx:key="" bindtouchstart="touchstart" bindtouchend="touchend" bindlongpress='closeQuestion' bindtap='showDetail' data-queid="{{item.id}}" data-pubid="{{item.publisherId}}" data-isclose="{{item.isClose}}">
+      <view>
+        <view class="title">{{item.title}}</view>
+        <view class="time">{{item.createdAt}}</view>
+        <view class="answer-actions">
+          <view class="like">
+            <a>{{item.follownum}} 关注 </a>
+          </view>
+          <view class="comments">
+            <a>{{item.commentnum}} 评论 </a>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{total2 > 0}}">
+    <view class='close-title'><text class="t28rpx">已关闭帖子</text></view>
+    <view wx:for="{{question_list2}}" class="row" wx:key="" bindtouchstart="touchstart" bindtouchend="touchend" bindlongpress='openQuestion' bindtap='showDetail' data-queid="{{item.id}}" data-pubid="{{item.publisherId}}" data-isClose="{{item.isClose}}">
+      <view>
+        <view class="title">{{item.title}}</view>
+        <view class="time">{{item.createdAt}}</view>
+        <view class="answer-actions">
+          <view class="like">
+            <a>{{item.likenum}} 赞同 </a>
+          </view>
+          <view class="comments">
+            <a>{{item.commentnum}} 评论 </a>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,27 @@
+.row {
+  align-content: left;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.t28rpx {
+  font-size: 28rpx;
+  line-height: 42rpx;
+  color: rgb(142, 142, 142);
+}
+
+image{
+  width: 88rpx;
+  height: 88rpx;
+  margin: 10rpx 20rpx;
+  border-radius: 60rpx;
+  overflow: hidden;
+}
+
+.nickname {
+    color: rgba(48, 46, 46, 0.74);
+    font-size: 36rpx;
+    margin: 0 10px;
+    line-height: 150%;
+}

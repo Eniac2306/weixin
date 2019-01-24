@@ -1,27 +1,155 @@
+@import "../../template/comment.wxss";
+
 .container {
-    margin: 20px 10px;
+  margin: 10px 10px;
+  align-items: left;
 }
 
 /*标题*/
 .title {
-    text-align: center;
-    color: #333;
-    font-size: 20px;
-    margin: 10px 0;
+  clear: both;
+  color: #333;
+  font-size: 20px;
+  margin: 10px 0;
+  /*float: left;*/
+}
+.nofollow {
+  position: absolute;
+  top: 58px;
+  right: 10px;
+  width:160rpx;
+  height: 65rpx;
+  text-align: center;
+  line-height: 65rpx;
+  font-size: 30rpx;
+}
+
+.isfollow {
+  position: absolute;
+  top: 58px;
+  right: 10px;
+  width:160rpx;
+  height: 65rpx;
+  text-align: center;
+  line-height: 65rpx;
+  font-size: 30rpx;
+  background-color: #0068C4;
+  color: white;
+  border: none;
+}
+
+.nickname {
+   text-align: center;
+    color: #999;
+    font-size: 30rpx;
+    margin: 0 0;
 }
 
 /*日期*/
 .time {
     text-align: center;
     color: #999;
-    font-size: 12px;
-    margin: 10px 0;
+    font-size: 30rpx;
+    margin: 0 0;
 }
 
 /*内容*/
 .content {
-    margin: 20px 0;
-    font-size: 14px;
-    color: #555;
-    line-height: 140%;
+  margin: 20px 0;
+  font-size: 42rpx;
+  color: #555;
+  line-height: 140%;
+}
+
+.operation{
+  float: right;
+  margin-bottom: 25rpx;
+}
+
+.operation .flex-item{
+  margin-right: 40rpx;
+  display: inline-block;
+}
+
+.operation image{
+  display: block;
+  margin: 0 auto;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.divLine{
+  clear: both;
+  background: #E0E3DA;
+  width: 100%;
+  height: 3rpx;
+}
+
+.detail-header {
+  display: flex;
+  align-items: left;
+}
+
+.detail-header image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  float: left;
+  border-radius: 40rpx;
+  overflow: hidden;
+}
+
+.dialog {
+  /*透明蒙层*/
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  z-index: 1000;
+  color: #fff;
+}
+
+.dialog_content {
+  /*评论输入框内容*/
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  background: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 110rpx;
+  padding-left: 21rpx;
+}
+
+.dialog-content-input {
+  flex: 1;
+  height: 80rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.dialog-content-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 149rpx;
+  height: 80rpx;
+  margin: 0 22rpx 0 20rpx;
+  padding: 0;
+  background: #118fff;
+  color: #fff;
+}
+
+.comment-footer-txt {
+  text-align: center;
+  padding: 12rpx 0;
+  font-size: 24rpx;
+  color: #8e8e8e;
 }

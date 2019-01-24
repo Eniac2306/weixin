@@ -1,0 +1,21 @@
+<view class='list'>
+    <view wx:for="{{question_list}}" class="row" wx:key="" bindtap='showDetail' data-queid="{{item.id}}" data-pubid="{{item.publisherId}}" data-isclose="{{item.isClose}}">
+      <view>
+        <!-- 标题 -->
+        <view class="title">{{item.title}}</view>
+        <!-- 日期 -->
+        <view class="time">{{item.createdAt}}</view>
+        <view class="answer-actions">
+          <view class="like">
+            <a>{{item.follownum}} 关注 </a>
+          </view>
+          <view class="comments">
+            <a>{{item.commentnum}} 回帖 </a>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+<view class="loading-indicator">
+    {{loadingTip}}
+</view>

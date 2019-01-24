@@ -1,0 +1,73 @@
+.add-page{
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  color: #676767;
+  padding: 30rpx 0;
+}
+
+.mod-a{
+  padding: 0 20rpx;
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.mod{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+  padding: 0 20rpx;
+}
+
+.chnumber{
+  position:absolute;
+  right:0;
+  bottom:0;
+  color:#b2b2b2;
+ text-align:right;
+}
+
+.button {
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 16px;
+  border: 0 none;
+  background: #118fff;
+  color: #fff;
+  margin: 30rpx auto;
+  border-radius: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.mt20{
+  margin-top: 20rpx;
+}
+
+.mod-big{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 250rpx;
+  padding: 0 20rpx;
+  position:relative;
+}
+
+.t-name .input{
+  text-align: right;
+  width: 510rpx;
+  overflow: hidden;
+  color: #b2b2b2;
+  height: 44rpx;
+}
+
+.toptips_warn {
+  color: red
+}

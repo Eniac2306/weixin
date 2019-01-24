@@ -1,0 +1,80 @@
+@import "../../../template/comment.wxss";
+
+.container {
+    margin: 10px 10px;
+    align-items: left;
+    position: relative;
+}
+
+.header {
+    display: flex;
+}
+
+/*标题*/
+.title {
+    color: #333;
+    font-size: 20px;
+    margin: 10px 0;
+    float: left;
+}
+
+.nickname {
+   text-align: center;
+    color: #999;
+    font-size: 30rpx;
+    margin: 0 0;
+}
+
+/*日期*/
+.time {
+    text-align: center;
+    color: #999;
+    font-size: 30rpx;
+    margin: 0 0;
+}
+
+/*内容*/
+.content {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 140%;
+}
+
+.divLine{
+  clear: both;
+  background: #E0E3DA;
+  width: 100%;
+  height: 3rpx;
+}
+
+.detail_header {
+  display: flex;
+}
+
+.detail_header image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  float: left;
+  border-radius: 40rpx;
+  overflow: hidden;
+}
+
+.comment-footer-txt {
+  text-align: center;
+  padding: 12rpx 0;
+  font-size: 24rpx;
+  color: #8e8e8e;
+}
+
+.close-btn {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-radius: 0
+}
+
+.close-btn::after{
+  border: none;
+}

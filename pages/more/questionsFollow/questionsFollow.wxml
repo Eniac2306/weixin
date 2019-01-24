@@ -1,0 +1,25 @@
+<view class="container">
+  <view wx:if="{{total == 0}}">
+    <view class="txtitem">
+      <text class="t28rpx">暂无关注</text>
+    </view>
+  </view>
+
+   <view wx:if="{{total > 0}}">
+    <view wx:for="{{follow_list}}" class="row" wx:key="" bindtap='showDetail' data-queid="{{item.id}}" data-pubid="{{item.publisherId}}" data-isclose="{{item.isClose}}">
+      <view>
+        <view class="title">{{item.title}}</view>
+        <view class="time">{{item.createdAt}}</view>
+        <view class="answer-actions">
+          <view class="like">
+            <a>{{item.likenum}} 赞同 </a>
+          </view>
+          <view class="comments">
+            <a>{{item.commentnum}} 回帖 </a>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

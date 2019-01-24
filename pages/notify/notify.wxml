@@ -1,11 +1,63 @@
 <view class="top-tab flex-wrp flex-tab">
-   <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
-      {{itemName}}
-    </view>
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
 </view>
 
-<view style='margin: 60px 10px'hidden='{{currentNavtab != 0}}'>我是通知我是通知我是通知我是通知我是通知我是通知我是通知我是通知我是通知我是通知我是通知我是通知</view>
+<scroll-view scroll-y="true" class="container notify withtab">
 
-<view style='margin: 60px 10px'hidden='{{currentNavtab != 1}}'>我是赞和感谢我是赞和感谢我是赞和感谢我是赞和感谢我是赞和感谢我是赞和感谢</view>
+  <view hidden="{{currentNavtab==0 ? '' : true}}">
+    
+    <view wx:if="{{newsFeedList.length == 0}}">
+      <view class="txtitem">
+        <text class="t28rpx">暂无动态</text>
+      </view>
+    </view>
+    <view class="feed-list" wx:for="{{newsFeedList}}" wx:for-item="item" wx:for-index="index" wx:key="that" bindtap='readDetail1'  data-qid="{{item.qid}}" data-fid="{{item.fid}}" data-isclose="{{item.isClose}}">
+      <view class='feedtitle'>
+        <image src="{{item.avatar}}"></image>
+        <view class="name">{{item.username}}跟了帖子</view>
+      </view>
+      <view class="title">{{item.title}}</view>
+      <view class="time">{{item.time}}</view> 
+    </view>
+  </view>
 
-<view style='margin: 60px 10px'hidden='{{currentNavtab != 2}}'>我是关注我是关注我是关注我是关注我是关注我是关注</view>
+
+  <view hidden="{{currentNavtab==1 ? '' : true}}">
+    <view class="subtitle">
+      <image src="../../images/ic_notice.png" mode="aspectFit" />
+      <view class="">
+        <text>消息</text>
+        <view class="info_num" wx:if="{{infoCount>0}}">{{infoCount}}</view>
+      </view>
+    </view>
+
+    <!--无消息记录-->
+    <view wx:if="{{infoList.length == 0}}">
+      <view class="txtitem">
+        <text class="t28rpx">暂无消息</text>
+      </view>
+    </view>
+
+    <view class="item-list" wx:for="{{infoList}}" wx:for-item="item" wx:for-index="index" wx:key="that">
+      <view class="item-info" data-index="{{index}}" bindtouchstart="touchSInfo" bindtouchmove="touchMInfo" bindtouchend="touchEInfo" style="left:{{item.left + 'rpx'}}" bindtap='readDetail2' data-id="{{item.id}}" data-qid="{{item.qid}}" data-fid="{{item.fid}}" data-isclose="{{item.isClose}}">
+        <image class="info-img" src="{{item.avatar}}"></image>
+        <view class="info-wrapper">
+          <view class="info-desc">
+            <view class="name">{{item.username}}</view>
+            <view class="time">{{item.time}}</view>
+          </view>
+          <view class="info-content">
+            <view class="message read_{{item.is_read}}">{{item.message}}</view>
+            <view class="status read_{{item.is_read}}">{{item.status}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="item-oper">
+        <view class="oper-delete" bindtap="infoDelete" data-index="{{index}}" data-id="{{item.id}}">删 除</view>
+      </view>
+    </view>
+    
+  </view>
+</scroll-view>

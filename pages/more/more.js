@@ -1,18 +1,13 @@
 //logs.js
 var util = require('../../utils/util.js')
 var app = getApp()
+var my_username;
+var openid;
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {}
   },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: ''
-    })
-  },
-
+ 
   // 获得用户信息
   onLoad: function () {
     if (app.globalData.userInfo) {
@@ -25,7 +20,6 @@ Page({
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
-        console.log('--userInfo--' + res.userInfo);
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
@@ -45,6 +39,20 @@ Page({
         }
       })
     }
+
+    wx.getStorage({
+      key: 'my_username',
+      success: function (ress) {
+        my_username = ress.data;
+        wx.getStorage({
+          key: 'user_openid',
+          success: function (res) {
+            openid = res.data;
+          },
+        })
+      },
+    })
+
   },
   getUserInfo: function (e) {
     console.log(e)
@@ -53,5 +61,36 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+
+  askQuestion: function () {
+    wx.navigateTo({
+      url: '../question/question'
+    });
+  },
+
+  navigate1: function () {
+    wx.navigateTo({
+      url: 'myQuestions/myQuestions?my_username=' + my_username + '&openid=' + openid,
+    })
+  },
+
+  navigate2: function () {
+    wx.navigateTo({
+      url: 'myAnswers/myAnswers?my_username=' + my_username + '&openid=' + openid,
+    })
+  },
+
+  navigate3: function () {
+    wx.navigateTo({
+      url: 'usersFollow/usersFollow?my_username=' + my_username + '&openid=' + openid,
+    })
+  },
+
+  navigate4: function(){
+    wx.navigateTo({
+      url: 'questionsFollow/questionsFollow?my_username=' + my_username + '&openid=' + openid,
+    })
+  },
+
 })

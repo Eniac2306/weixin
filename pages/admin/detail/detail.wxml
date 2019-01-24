@@ -1,0 +1,25 @@
+<import src="../../../template/comment.wxml" />
+
+<view class='container' bindlongpress='deleteQuestion'>
+  <view class='detail_header'>
+    <view>
+      <image mode="aspectFill" class="" src='{{userInfo.userPic}}'></image>
+    </view>
+    <view>
+      <text class='nickname'>{{userInfo.nickname}}</text>
+      <view class="time">{{detail.updatedAt}}</view>
+    </view>
+  </view>
+  <view class="content">{{detail.content}}</view>
+</view>
+
+<view class="divLine"></view>
+
+<view wx:if="{{!(detail.commentnum > 0)}}" class="comment-footer-txt">暂无回帖</view>
+
+<!--评论列表-->
+<view wx:if="{{ detail.commentnum > 0 }}" wx:for="{{commentList}}" wx:key="comment">
+  <template is="comment" data="{{item}}" />
+</view>
+<view class="comment-footer-txt" wx:if="{{detail.commentnum}}" >---无更多回帖---</view>
+<button class='close-btn' bindtap='closeQuestion' style='background-color:{{btn_color}}'>{{btn_txt}}</button>

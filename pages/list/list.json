@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "article"
+  "navigationBarTitleText": "帖子列表",
+  "enablePullDownRefresh": true
 }

@@ -1,5 +1,60 @@
-<view class="container">
-    <view class="title">{{detail.title}}</view>
-    <view class="time">{{detail.updatedAt}}</view>
-    <view class="content">{{detail.content}}</view>
+<import src="../../template/comment.wxml" />
+
+<view class="dialog" wx:if="{{showCommentDialog}}" bindtap="hideCommentDialog"></view>
+<view class="dialog_content" wx:if="{{showCommentDialog}}">
+  <input bindinput="commentText" placeholder="{{commentInputHolder}}" focus="true" class="dialog-content-input" />
+  <view>
+    <button catchtap="publishComment" class="dialog-content-btn">跟贴</button>
+  </view>
 </view>
+
+<view class="dialog" wx:if="{{showCommentDialog1}}" bindtap="hideCommentDialog1"></view>
+<view class="dialog_content" wx:if="{{showCommentDialog1}}">
+  <input bindinput="commentText" placeholder="{{commentInputHolder}}" focus="true" class="dialog-content-input" />
+  <view>
+    <button catchtap="publishComment" class="dialog-content-btn">匿名跟帖</button>
+  </view>
+</view>
+
+
+<view class='container'>
+  <view class='header'>
+      <view class="title">{{detail.title}}</view>
+      <button class='nofollow' wx:if="{{!isFollowU}}" bindtap='changeFollowU'>+ 关注圈友</button>
+      <button class='isfollow' wx:if="{{isFollowU}}" bindtap='changeFollowU'>已关注</button>
+  </view>
+
+  <view class='detail-header'>
+    <view>
+      <image mode="aspectFill" src='{{userInfo.userPic}}'></image>
+    </view>
+    <view>
+      <text class='nickname'>{{userInfo.nickname}}</text>
+      <view class="time">{{detail.createdAt}}</view>
+    </view>
+  </view>
+  <view class="content">{{detail.content}}</view>
+</view>
+
+<view class="operation flex-wrp flex-tab">
+    <view class="follow flex-item" bindtap='changeFollow'>
+        <image src="{{followImg}}"></image>
+    </view>
+    <view class="flex-item" wx:if="{{isClose == 0}}" bindtouchstart="touchstart" bindtouchend="touchend" bindlongpress="showCommentDialog1" bindtap='showCommentDialog'>
+        <image src="../../images/comment.png"></image>
+    </view>
+    <view class="flex-item" wx:if="{{isClose == 1}}" bindtap="closeAlert">
+        <image src="../../images/comment.png"></image>
+    </view>
+</view>
+<view class="divLine"></view>
+
+<view wx:if="{{!(detail.commentnum > 0) && isClose == 0}}" class="comment-footer-txt">暂无回复</view>
+
+<!--评论列表-->
+<view wx:if="{{ detail.commentnum > 0 && isClose == 0}}" wx:for="{{commentList}}" wx:key="comment">
+  <template is="comment" data="{{item}}" />
+</view>
+<view class="comment-footer-txt" wx:if="{{detail.commentnum > 0 && isClose == 0 }}" >---无更多帖子---</view>
+
+<view wx:if="{{ isClose == 1 }}" class="comment-footer-txt">该帖子已关闭</view>
