@@ -9,7 +9,7 @@ App({
   onLaunch: function () {
     var that = this;
    
-    //调用API从本地缓存中获取数据
+    //调用API从本地缓存中获取数据，后端使用BOMB开发
     
     
   },

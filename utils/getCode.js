@@ -1,4 +1,4 @@
-// 加载框
+// 加载处理框
 function dataLoading(txt, icon, fun) {
   wx.showToast({
     title: txt,

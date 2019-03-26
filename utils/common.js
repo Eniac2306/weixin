@@ -1,3 +1,10 @@
+/*!
+ * Bmob WeChat applet SDK
+ * http://www.bmob.cn
+ * Copyright Bmob, Inc.
+ * The Bmob WeChat applet SDK is freely distributable under the MIT license.
+ * (c) 2016-2050 Magic
+ */
 function showTip(sms, icon, fun, t) {
     if (!t) {
         t = 1000;

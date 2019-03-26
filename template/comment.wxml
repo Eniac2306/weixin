@@ -1,4 +1,4 @@
-<!--评论模版-->
+<!--评论用的模板-->
 <template name="comment">
     <view bindtap="commentTap" data-item="{{item}}">
         <view class="userInfo">
