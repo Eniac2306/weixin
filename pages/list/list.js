@@ -4,7 +4,7 @@ var page_size = 10;
 var total = 0;
 Page({
   data: {
-    loadingTip: '上拉加载更多',
+    loadingTip: '上拉加载更多信息',
     page_index: 0,
   },
   /**

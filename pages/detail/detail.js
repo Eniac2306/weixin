@@ -37,7 +37,7 @@ Page({
       isClose:options.isClose
     })
 
-    wx.getStorage({ //判断当前是不是自己
+    wx.getStorage({ //判断当前操作是不是自己
       key: 'user_id',
       success: function (ress) {
         if (publisherId == ress.data) {
